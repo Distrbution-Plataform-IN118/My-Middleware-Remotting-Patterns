@@ -24,10 +24,10 @@ public class NamingInvoker implements Runnable
 	}
 	
 	public void invoke(int port) throws IOException, Throwable{
-		/*while(true) {
-			 
-		}	*/
-		(new Thread(new NamingInvoker(new ServerRequestHandler(port)))).start();
+		while(true) {
+			(new Thread(new NamingInvoker(new ServerRequestHandler(port)))).start();	 
+		}	
+		
 	}
 
 	@Override

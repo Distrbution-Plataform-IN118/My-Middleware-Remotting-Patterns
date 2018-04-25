@@ -22,7 +22,6 @@ public class NamingProxy extends ClientProxy implements INaming {
 		ArrayList<Object> parameters = new ArrayList<Object>();
 		parameters.add(serviceName);
 		parameters.add(clientProxy);
-		
 		// information sent to Requestor
 		Invocation inv = new Invocation();
 		inv.setObjectId(this.getObjectId());
