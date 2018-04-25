@@ -1,53 +1,62 @@
-import java.util.ArrayList;
+import java.util.*;
 
-
-public class Invocation {
-
-	public void setObjectId(int objectId) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setIpAddress(int port) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setPortNumber(int port) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setOperationName(String methodName) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setParameters(ArrayList<Object> parameters) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public Client getClientProxy() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	String parameters;
+public class Invocation 
+{
+	private int objectId;
+	private String host;
+	private int port;
+	private String methodName;
+	private ArrayList<Object> parameters;
 	
-	String operationName;
-
-	public String getParameters() {
+	public Invocation(){}
+	
+	public int getObjectId()
+	{
+		return objectId;
+	}
+	
+	public void setObjectId(int objectId)
+	{
+		this.objectId = objectId;
+	}
+	
+	public String getHost()
+	{
+		return host;
+	}
+	
+	public void setHost(String host)
+	{
+		this.host = host;
+	}
+	
+	public int getPort()
+	{
+		return port;
+	}
+	
+	public void setPort(int port)
+	{
+		this.port = port;
+	}
+	
+	public String getMethodName()
+	{
+		return methodName;
+	}
+	
+	public void setMethodName(String methodName)
+	{
+		this.methodName = methodName;
+	}
+	
+	public ArrayList<Object> getParameters()
+	{
 		return parameters;
 	}
-
-	public void setParameters(String parameters) {
+	
+	public void setParameters(ArrayList<Object> parameters)
+	{
 		this.parameters = parameters;
 	}
-
-	public String getOperationName() {
-		return operationName;
-	}
-
-
 }

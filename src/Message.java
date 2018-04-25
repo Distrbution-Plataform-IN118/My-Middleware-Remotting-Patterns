@@ -3,6 +3,7 @@ import java.io.Serializable;
 
 public class Message implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	private MessageHeader header;
 	private MessageBody body;
 	
@@ -16,9 +17,12 @@ public class Message implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
+	public MessageHeader getHeader(){
+		return this.header;
+	}
 	public MessageBody getBody() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.body;
 	}
 
 }

@@ -3,12 +3,12 @@ import java.io.Serializable;
 import java.net.UnknownHostException;
 
 
-public class Requestor implements Serializable	 {
+public class NamingRequestor implements Serializable	 {
 
 	private static final long serialVersionUID = 1L;
 	private ClientRequestHandler crh;
 	
-	public Requestor(String host, int port)
+	public NamingRequestor(String host, int port)
 	{
 		System.out.println("Delegando Comunicacao para ClienteRequestHandler");
 		crh = new ClientRequestHandler(host, port);
@@ -32,7 +32,6 @@ public class Requestor implements Serializable	 {
 		byte[] msgToBeUnmarshalled = crh.receive();
 		//Realiza Deserializacao de bytes->Message
 		Message msgUnmarshalled = Marshaller.unmarshall(msgToBeUnmarshalled);
-		System.out.println(msgUnmarshalled);
 		//Instancia o resultado recebido
 		Termination termination = new Termination();
 		termination.setResult(msgUnmarshalled.getBody().getReplyBody().getOperationResult());
